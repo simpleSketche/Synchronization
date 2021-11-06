@@ -1,0 +1,15 @@
+﻿<Window x:Class="ETABS_Listener.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ETABS_Listener"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Start Record" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="152" Height="57" Click="startRecord"/>
+        <TextBox x:Name="changeLog" HorizontalAlignment="Left" Height="298" Margin="10,111,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="772" />
+        <Label Content="Log" HorizontalAlignment="Left" Height="26" Margin="10,85,0,0" VerticalAlignment="Top" Width="121"/>
+
+    </Grid>
+</Window>

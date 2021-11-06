@@ -1,0 +1,17 @@
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener.csproj.AssemblyReference.cache
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\MainWindow.g.cs
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\App.g.cs
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener_MarkupCompile.cache
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener_MarkupCompile.lref
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\bin\Debug\ETABS_Listener.exe.config
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\bin\Debug\ETABS_Listener.exe
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\bin\Debug\ETABS_Listener.pdb
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\bin\Debug\CSiAPIv1.dll
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\MainWindow.baml
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener.g.resources
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener.Properties.Resources.resources
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener.csproj.GenerateResource.cache
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener.csproj.CoreCompileInputs.cache
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener.csproj.CopyComplete
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener.exe
+C:\Users\moustafa.el-sawy\source\repos\ETABS_Listener\obj\Debug\ETABS_Listener.pdb
