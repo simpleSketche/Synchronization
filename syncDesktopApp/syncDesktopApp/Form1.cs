@@ -61,7 +61,10 @@ namespace syncDesktopApp
         {
             private Dictionary<string, BeamStorageProperties> beamProperties = new Dictionary<string, BeamStorageProperties>();
 
-            public BeamStorageGUID(string GUID, BeamStorageProperties beamProp)
+            public BeamStorageGUID()
+            {}
+
+            public void BeamStorageGUIDAdd(string GUID, BeamStorageProperties beamProp)
             {
                 beamProperties.Add(GUID, beamProp);
             }
@@ -102,15 +105,15 @@ namespace syncDesktopApp
             string GUID = "";
 
             mySapModel.FrameObj.GetAllFrames(ref NumberofFrames, ref MyName, ref PropName, ref StoryName, ref PointName1, ref PointName2, ref Point1X, ref Point1Y, ref Point1Z, ref Point2X, ref Point2Y, ref Point2Z, ref Angle, ref Offset1X, ref Offset2X, ref Offset1Y, ref Offset2Y, ref Offset1Z, ref Offset2Z, ref CardinalPoint);
-            BeamStorageGUID[] beamJSON = new BeamStorageGUID[NumberofFrames];
+            BeamStorageGUID bmStore = new BeamStorageGUID();
             for (int i = 0; i < NumberofFrames; i++)
             {
                 mySapModel.FrameObj.GetGUID(MyName[i], ref GUID);
                 BeamStorageProperties beamProp = new BeamStorageProperties(MyName[i], PointName1[i], PointName2[i], PropName[i], false);
-                beamJSON[i] = new BeamStorageGUID(GUID, beamProp);
+                bmStore.BeamStorageGUIDAdd(GUID, beamProp);
             }
 
-            string jsonData = JsonConvert.DeserializeObject<string>(beamJSON.ToString());
+            string jsonData = JsonConvert.DeserializeObject<string>(bmStore.ToString());
 
             initialize(jsonData);
 

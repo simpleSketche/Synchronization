@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\syncDesktopApp",
+    "\\syncDesktopApp\\syncDesktopApp"
   ],
-  "SelectedNode": "\\syncDesktopApp.sln",
+  "SelectedNode": "\\syncDesktopApp\\syncDesktopApp.sln",
   "PreviewInSolutionExplorer": false
 }
