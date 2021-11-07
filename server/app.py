@@ -7,6 +7,16 @@ app = Flask(__name__)
 # 3. update the master json on server
 
 
+class Master_json():
+    def __init__(self):
+        self.result = {
+            "result": 100
+        }
+
+    def update(self, input):
+        self.result["result"] = input
+
+
 @app.route('/', methods=['GET', 'POST'])
 def post():
     if (request.method == "POST"):
@@ -23,8 +33,15 @@ def show_post(message):
 
 @app.route('/calculate/<int:num>')
 def calculate_post(num):
-    return f'Calculating {num*1000}'
+    master_json.update(num)
+    return f'Calculating {master_json.result["result"]}'
+
+
+@app.route('/check')
+def checck_post():
+    return f'Calculating {master_json.result}'
 
 
 if __name__ == "__main__":
+    master_json = Master_json()
     app.run(debug=True)

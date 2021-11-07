@@ -23,7 +23,8 @@ namespace syncDesktopApp
         private void button_Click(object something, EventArgs e)
         {
             string input = sender.Text;
-            WebRequest request = HttpWebRequest.Create($"http://127.0.0.1:5000/calculate/{ input }");
+            WebRequest request = HttpWebRequest.Create($"http://127.0.0.1:5000/{ input }");
+            request.ContentType = "application/json";
             WebResponse response = request.GetResponse();
             StreamReader reader = new StreamReader(response.GetResponseStream());
 
