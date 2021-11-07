@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syncDesktopApp", "syncDesktopApp\syncDesktopApp.csproj", "{08138A25-8154-4DAF-8C0E-AFCDE938BF31}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ApiCall", "ApiCall\ApiCall.vbproj", "{7AE45497-FD29-4D2F-861A-E050E9FCFDBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08138A25-8154-4DAF-8C0E-AFCDE938BF31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08138A25-8154-4DAF-8C0E-AFCDE938BF31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08138A25-8154-4DAF-8C0E-AFCDE938BF31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08138A25-8154-4DAF-8C0E-AFCDE938BF31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE45497-FD29-4D2F-861A-E050E9FCFDBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE45497-FD29-4D2F-861A-E050E9FCFDBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE45497-FD29-4D2F-861A-E050E9FCFDBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE45497-FD29-4D2F-861A-E050E9FCFDBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2AB1622-7BF7-4672-AB68-A2684D8E6205}
+	EndGlobalSection
+EndGlobal
