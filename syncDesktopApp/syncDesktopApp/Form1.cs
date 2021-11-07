@@ -62,7 +62,7 @@ namespace syncDesktopApp
                 receiver.Clear();
                 receiver.AppendText(responseJson.ToString());
 
-                if (this.inputVal == 6)
+                if (this.inputVal == 100)
                 {
                     break;
                 }
