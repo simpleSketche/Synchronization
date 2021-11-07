@@ -23,13 +23,25 @@ namespace syncDesktopApp
         private void button_Click(object something, EventArgs e)
         {
             string input = sender.Text;
-            WebRequest request = HttpWebRequest.Create($"http://127.0.0.1:5000/{ input }");
-            request.ContentType = "application/json";
-            WebResponse response = request.GetResponse();
-            StreamReader reader = new StreamReader(response.GetResponseStream());
+            int intput = Int32.Parse(input);
+            while (true)
+            {
+                intput++;
+                WebRequest request = HttpWebRequest.Create($"http://127.0.0.1:5000/update/{ intput.ToString() }");
+                request.ContentType = "application/json";
+                WebResponse response = request.GetResponse();
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+                string responseJson = reader.ReadToEnd();
+                receiver.Clear();
+                receiver.AppendText(responseJson.ToString());
+                System.Threading.Thread.Sleep(1000);
 
-            string responseJson = reader.ReadToEnd();
-            receiver.Text = responseJson.ToString();
+                if (intput == 6)
+                {
+                    break;
+                }
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

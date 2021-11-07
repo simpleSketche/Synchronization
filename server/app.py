@@ -31,15 +31,15 @@ def show_post(message):
     return f'Sent {message}'
 
 
-@app.route('/calculate/<int:num>')
-def calculate_post(num):
+@app.route('/update/<int:num>')
+def update_post(num):
     master_json.update(num)
-    return f'Calculating {master_json.result["result"]}'
+    return f'Updating the master json result to: {master_json.result["result"]}'
 
 
 @app.route('/check')
 def checck_post():
-    return f'Calculating {master_json.result}'
+    return f'Checking the current master json result: {master_json.result}'
 
 
 if __name__ == "__main__":
