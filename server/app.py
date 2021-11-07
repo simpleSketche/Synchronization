@@ -7,10 +7,26 @@ app = Flask(__name__)
 # 3. update the master json on server
 
 
-class Master_json():
+class Master_branch():
     def __init__(self):
         self.result = {
-            "result": 100
+            "result": 100,
+            "Beam_01": {"x": 0, "y": 0, "z": 0},
+            "Beam_02": {"x": 0, "y": 0, "z": 0},
+            "Beam_03": {"x": 0, "y": 0, "z": 0}
+        }
+
+    def push(self, input):
+        self.result["result"] = input
+
+
+class Update_branch():
+    def __init__(self):
+        self.result = {
+            "result": 100,
+            "Beam_01": {"x": 0, "y": 0, "z": 0},
+            "Beam_02": {"x": 0, "y": 0, "z": 0},
+            "Beam_03": {"x": 0, "y": 0, "z": 0}
         }
 
     def update(self, input):
@@ -33,15 +49,23 @@ def show_post(message):
 
 @app.route('/update/<int:num>')
 def update_post(num):
-    master_json.update(num)
-    return f'Updating the master json result to: {master_json.result["result"]}'
+    update_branch.update(num)
+    return f'Feeling from the Update branch {update_branch.result}'
 
 
-@app.route('/check')
-def checck_post():
-    return f'Checking the current master json result: {master_json.result}'
+@app.route('/pull')
+def pull_post():
+    return f'Pulling the data: {master_branch.result} from the current Master branch'
+
+
+@app.route('/push/<int:num>')
+def push_post(num):
+    master_branch.push(num)
+    return f'Pushing the data result:{num} to the current Master branch'
 
 
 if __name__ == "__main__":
-    master_json = Master_json()
+    master_branch = Master_branch()
+    update_branch = Update_branch()
+
     app.run(debug=True)
