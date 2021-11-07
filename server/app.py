@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 class Master_branch():
     def __init__(self):
-        self.result = {
+        self.data = {
             "result": 100,
             "unlocked": {
                 "Beam_01": {"x": 0, "y": 0, "z": 0},
@@ -27,7 +27,7 @@ class Master_branch():
 
 class Update_branch():
     def __init__(self):
-        self.result = {
+        self.data = {
             "result": 100,
             "unlocked": {
                 "Beam_01": {"x": 0, "y": 0, "z": 0},
@@ -52,6 +52,12 @@ def post():
         return "your message is received!"
 
 
+@app.route('/initialize/json')
+def initialize_post(json):
+    master_branch.data = json
+    update_branch.data = json
+
+
 @app.route('/send/<message>')
 def show_post(message):
     return f'Sent {message}'
@@ -60,12 +66,12 @@ def show_post(message):
 @app.route('/update/<int:num>')
 def update_post(num):
     update_branch.update(num)
-    return f'Feeling from the Update branch {update_branch.result}'
+    return f'Feeling from the Update branch {update_branch.data}'
 
 
 @app.route('/pull')
 def pull_post():
-    return f'Pulling the data: {master_branch.result} from the current Master branch'
+    return f'Pulling the data: {master_branch.data} from the current Master branch'
 
 
 @app.route('/push/<int:num>')

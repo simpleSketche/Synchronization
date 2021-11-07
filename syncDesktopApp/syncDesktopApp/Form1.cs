@@ -48,6 +48,15 @@ namespace syncDesktopApp
             return response;
         }
 
+        private WebResponse initialize(string etabJson)
+        {
+            WebRequest request = HttpWebRequest.Create($"http://127.0.0.1:5000/update/{ etabJson }");
+            request.ContentType = "application/json";
+            WebResponse response = request.GetResponse();
+            return response;
+        }
+
+
         private class BeamStorageGUID
         {
             private Dictionary<string, BeamStorageProperties> beamProperties = new Dictionary<string, BeamStorageProperties>();
@@ -100,6 +109,10 @@ namespace syncDesktopApp
                 BeamStorageProperties beamProp = new BeamStorageProperties(MyName[i], PointName1[i], PointName2[i], PropName[i], false);
                 beamJSON[i] = new BeamStorageGUID(GUID, beamProp);
             }
+
+            string jsonData = JsonConvert.DeserializeObject<string>(beamJSON.ToString());
+
+            initialize(jsonData);
 
             while (true)
             {
