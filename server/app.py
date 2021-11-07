@@ -11,9 +11,14 @@ class Master_branch():
     def __init__(self):
         self.result = {
             "result": 100,
-            "Beam_01": {"x": 0, "y": 0, "z": 0},
-            "Beam_02": {"x": 0, "y": 0, "z": 0},
-            "Beam_03": {"x": 0, "y": 0, "z": 0}
+            "unlocked": {
+                "Beam_01": {"x": 0, "y": 0, "z": 0},
+                "Beam_02": {"x": 0, "y": 0, "z": 0},
+                "Beam_03": {"x": 0, "y": 0, "z": 0}
+            },
+            "locked": {
+                "Beam_04": {"x": 0, "y": 0, "z": 0}
+            }
         }
 
     def push(self, input):
@@ -24,9 +29,14 @@ class Update_branch():
     def __init__(self):
         self.result = {
             "result": 100,
-            "Beam_01": {"x": 0, "y": 0, "z": 0},
-            "Beam_02": {"x": 0, "y": 0, "z": 0},
-            "Beam_03": {"x": 0, "y": 0, "z": 0}
+            "unlocked": {
+                "Beam_01": {"x": 0, "y": 0, "z": 0},
+                "Beam_02": {"x": 0, "y": 0, "z": 0},
+                "Beam_03": {"x": 0, "y": 0, "z": 0}
+            },
+            "locked": {
+                "Beam_04": {"x": 0, "y": 0, "z": 0}
+            }
         }
 
     def update(self, input):
