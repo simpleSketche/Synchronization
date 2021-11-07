@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\c_sharp_client",
+    "\\ETABS_Listener",
+    "\\ETABS_Worksharing",
+    "\\server",
+    "\\syncDesktopApp"
+  ],
+  "SelectedNode": "\\syncDesktopApp\\syncDesktopApp.sln",
+  "PreviewInSolutionExplorer": false
+}
