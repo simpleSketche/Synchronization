@@ -37,9 +37,15 @@ namespace ETABS_Listener
 
             while (true)
             {
+                // listening to the ETABS
                 mySapModel.FrameObj.GetAllFrames(ref NumberofFrames, ref MyName, ref PropName, ref StoryName, ref PointName1, ref PointName2, ref Point1X, ref Point1Y, ref Point1Z, ref Point2X, ref Point2Y, ref Point2Z, ref Angle, ref Offset1X, ref Offset2X, ref Offset1Y, ref Offset2Y, ref Offset1Z, ref Offset2Z, ref CardinalPoint);
                 changeLog.AppendText(String.Format("Number of beams {0}", NumberofFrames));
                 Console.WriteLine(String.Format("Number of beams {0}", NumberofFrames));
+                // if we got changes
+                // then we sending the request to update
+
+                // listening to the flask server
+
 
                 System.Threading.Thread.Sleep(3000);
             }
