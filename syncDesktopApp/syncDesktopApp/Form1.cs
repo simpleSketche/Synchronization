@@ -117,9 +117,23 @@ namespace syncDesktopApp
             while (true)
             {
 
+                //GET REQUEST to get JSON
+
                 // 1 -- Search for most recent locked items
+                //int masterFrames = 0;
+                //BeamStorageGUID[] beamJSON_master = new BeamStorageGUID[masterFrames]; ;
+                //for (int i = 0; i < masterFrames; i++)
+                //{
+                    //mySapModel.FrameObj.GetGUID(MyName[i], ref GUID);
+                    //BeamStorageProperties beamProp = new BeamStorageProperties(MyName[i], PointName1[i], PointName2[i], PropName[i], false);
+                    //beamJSON[i] = new BeamStorageGUID(GUID, beamProp);
+                //}
+
+
                 // 2 -- Search through locked items list
                 // 3 -- Search for changes to ETABS model
+
+
                 // 4 -- Sleep for 10 seconds
 
                 this.inputVal++;
